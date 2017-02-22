@@ -14,6 +14,14 @@
 		FB78417C1E5DBF0700B70249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78417A1E5DBF0700B70249 /* LaunchScreen.storyboard */; };
 		FB7841871E5DBF0700B70249 /* Music_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841861E5DBF0700B70249 /* Music_SearchTests.swift */; };
 		FB7841921E5DBF0700B70249 /* Music_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841911E5DBF0700B70249 /* Music_SearchUITests.swift */; };
+		FB7841A01E5DC8E000B70249 /* albumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78419F1E5DC8E000B70249 /* albumTableViewCell.swift */; };
+		FB7841A21E5DCAD200B70249 /* iTuneConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841A11E5DCAD200B70249 /* iTuneConnection.swift */; };
+		FB7841A41E5DCB2100B70249 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841A31E5DCB2100B70249 /* Album.swift */; };
+		FB7841A61E5DE06900B70249 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841A51E5DE06900B70249 /* Data.swift */; };
+		FB7841A81E5DF68800B70249 /* music search.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7841A71E5DF68800B70249 /* music search.png */; };
+		FB7841AA1E5DF73200B70249 /* wikiConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841A91E5DF73200B70249 /* wikiConnection.swift */; };
+		FB7841AC1E5DF7C800B70249 /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841AB1E5DF7C800B70249 /* Lyrics.swift */; };
+		FB7841AE1E5DFAE200B70249 /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7841AD1E5DFAE200B70249 /* LyricsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		FB78418D1E5DBF0700B70249 /* Music SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7841911E5DBF0700B70249 /* Music_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SearchUITests.swift; sourceTree = "<group>"; };
 		FB7841931E5DBF0700B70249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB78419F1E5DC8E000B70249 /* albumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = albumTableViewCell.swift; sourceTree = "<group>"; };
+		FB7841A11E5DCAD200B70249 /* iTuneConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTuneConnection.swift; sourceTree = "<group>"; };
+		FB7841A31E5DCB2100B70249 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		FB7841A51E5DE06900B70249 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		FB7841A71E5DF68800B70249 /* music search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music search.png"; sourceTree = "<group>"; };
+		FB7841A91E5DF73200B70249 /* wikiConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wikiConnection.swift; sourceTree = "<group>"; };
+		FB7841AB1E5DF7C800B70249 /* Lyrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
+		FB7841AD1E5DFAE200B70249 /* LyricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +115,16 @@
 			children = (
 				FB7841711E5DBF0700B70249 /* AppDelegate.swift */,
 				FB7841731E5DBF0700B70249 /* ViewController.swift */,
+				FB7841AD1E5DFAE200B70249 /* LyricsViewController.swift */,
+				FB7841A51E5DE06900B70249 /* Data.swift */,
 				FB7841751E5DBF0700B70249 /* Main.storyboard */,
+				FB78419F1E5DC8E000B70249 /* albumTableViewCell.swift */,
+				FB7841A11E5DCAD200B70249 /* iTuneConnection.swift */,
+				FB7841A91E5DF73200B70249 /* wikiConnection.swift */,
+				FB7841A31E5DCB2100B70249 /* Album.swift */,
+				FB7841AB1E5DF7C800B70249 /* Lyrics.swift */,
 				FB7841781E5DBF0700B70249 /* Assets.xcassets */,
+				FB7841A71E5DF68800B70249 /* music search.png */,
 				FB78417A1E5DBF0700B70249 /* LaunchScreen.storyboard */,
 				FB78417D1E5DBF0700B70249 /* Info.plist */,
 			);
@@ -234,6 +258,7 @@
 			files = (
 				FB78417C1E5DBF0700B70249 /* LaunchScreen.storyboard in Resources */,
 				FB7841791E5DBF0700B70249 /* Assets.xcassets in Resources */,
+				FB7841A81E5DF68800B70249 /* music search.png in Resources */,
 				FB7841771E5DBF0700B70249 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7841AE1E5DFAE200B70249 /* LyricsViewController.swift in Sources */,
+				FB7841AA1E5DF73200B70249 /* wikiConnection.swift in Sources */,
 				FB7841741E5DBF0700B70249 /* ViewController.swift in Sources */,
+				FB7841A61E5DE06900B70249 /* Data.swift in Sources */,
+				FB7841A21E5DCAD200B70249 /* iTuneConnection.swift in Sources */,
+				FB7841A01E5DC8E000B70249 /* albumTableViewCell.swift in Sources */,
+				FB7841AC1E5DF7C800B70249 /* Lyrics.swift in Sources */,
 				FB7841721E5DBF0700B70249 /* AppDelegate.swift in Sources */,
+				FB7841A41E5DCB2100B70249 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
