@@ -5,6 +5,7 @@
 //  Created by Pandu on 2/22/17.
 //  Copyright © 2017 Pandurang Yachwad. All rights reserved.
 //
+// FUTURE - All potential improvement changes are commented with FUTURE
 
 import UIKit
 
@@ -17,6 +18,7 @@ class iTuneConnection: NSObject {
         let task = URLSession.shared.dataTask(with: url as! URL) { (data, response, error) in
             if error != nil{
                 print("Error")
+// FUTURE - This can be handled with message to user about the error
             } else{
                 if let urlContent = data{
                     do {
@@ -62,6 +64,7 @@ class iTuneConnection: NSObject {
                             }
                         }
                     } catch{
+// FUTURE - This can be handled with message to user about the error                        
                          print("JSON Processing Failed")
                     }
                 }

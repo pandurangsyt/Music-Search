@@ -5,6 +5,7 @@
 //  Created by Pandu on 2/22/17.
 //  Copyright © 2017 Pandurang Yachwad. All rights reserved.
 //
+// FUTURE - All potential improvement changes are commented with FUTURE
 
 import UIKit
 
@@ -12,16 +13,12 @@ class wikiConnection: NSObject {
     class func getLyricsForSong(songName: String, artistName: String, completionHandler:@escaping (Lyrics) -> ()){
         let escapedSongNameString = songName.replacingOccurrences(of: " ", with: "+")
         let escapedArtistNameString = artistName.replacingOccurrences(of: " ", with: "+")
-//        let url = NSURL(string: "http://lyrics.wikia.com/api.php?func=getSong&artist=\(escapedArtistNameString)&song=\(escapedSongNameString)&fmt=json")
         let url = "http://lyrics.wikia.com/api.php?func=getSong&artist=\(escapedArtistNameString)&song=\(escapedSongNameString)&fmt=json"
-
-//        let url = "https://lyrics.wikia.com/api.php?func=getSong&artist=Tom+Waits&song=new+coat+of+paint&fmt=json"
-
         guard let myURL = URL(string: url) else {
             print("Error: \(url) doesn't seem to be a valid URL")
             return
         }
-        
+// Comment - As API output was not in JSON, did workaround to read the content and parse the lyrics using String manupulation
         do {
             let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
             let beforeLyricsString = myHTMLString.components(separatedBy: "'lyrics':'")
@@ -34,6 +31,8 @@ class wikiConnection: NSObject {
         } catch let error {
             print("Error: \(error)")
         }
+// FUTURE - Lyrics Wikia API is not JSON so had to parse the output string and display the lyrics. Other public API for lyrics can be used for better performance and wider range of lyrics
+        
 /*        let task = URLSession.shared.dataTask(with: url as! URL) { (data, response, error) in
             if error != nil{
                 print("Error")

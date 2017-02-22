@@ -5,6 +5,7 @@
 //  Created by Pandu on 2/22/17.
 //  Copyright © 2017 Pandurang Yachwad. All rights reserved.
 //
+// FUTURE - All potential improvement changes are commented with FUTURE
 
 import UIKit
 
@@ -32,12 +33,8 @@ class LyricsViewController: UIViewController {
         artistNameLabel.text = artistName
 
         wikiConnection.getLyricsForSong(songName: trackName, artistName: artistName) { (lyrics) in
-            print(lyrics)
-            print(lyrics.lyrics)
-//            dispatchMain()
             self.lyricsLabel.text = lyrics.lyrics
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//            self.loadView()
+// FUTURE - No Found results can be handled with some beautiful image. 
         }
     }
 

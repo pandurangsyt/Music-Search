@@ -5,6 +5,12 @@
 //  Created by Pandu on 2/22/17.
 //  Copyright © 2017 Pandurang Yachwad. All rights reserved.
 //
+// FUTURE - All potential improvement changes are commented with FUTURE 
+
+/*
+    This project loosely follows MVC model, given more time, effective MVC can be followed for better results. Also not all corner cases are not considered, e.g. handling of unknown errors, incorrect string search, etc. 
+     Attention is given to functionality and ability to search using public API's. Used JSON parsing and webcontent parsing for reading the data
+ */
 
 import UIKit
 import Foundation
@@ -14,12 +20,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedIndex = 0
     
     @IBOutlet var searchString: UITextField!
-    
+
+    // FUTURE -  add "Loading" activity view while search is being done so user knows search data is being loaded. For now, added label to display message to user for search in progress. This message get disappeared when search is complete
     @IBOutlet var searchProgressMessage: UILabel!
     @IBAction func searchMusic(_ sender: Any) {
         searchString.resignFirstResponder()
-        
-// FUTURE -  add "Loading" activity view while search is being done so user knows search data is being loaded
         
         if (searchString.text?.isEmpty)!{
             
@@ -42,10 +47,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
+        
+// Tableview is hidden and will be displayed when search data is available
         super.viewDidLoad()
         self.tableView.isHidden = true
         self.searchProgressMessage.isHidden = true
-        self.navigationController?.isToolbarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,6 +89,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+// FUTURE -  Check for segue name before passing on values. Here there is only one segue validation is not done
         let vc = segue.destination as! LyricsViewController
         vc.albumName = albumNames[selectedIndex]
         vc.albumImageURL = albumImageUrls[selectedIndex]
